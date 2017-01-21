@@ -10,8 +10,15 @@ before_action :authenticate_user!, only: [:new, :create, :update, :edit, :destro
   end
 
   def index
-    @jobs=Job.where(:is_hidden => false).order("created_at DESC")
+    @jobs=case params[:order]
+  when 'by_lower_bound'
+    Job.published.publish_lower
+  when 'by_upper_bound'
+    Job.published.order('wage_upper_bound DESC')
+  else
+    Job.published.recent
   end
+end
 
    def new
      @job=Job.new
