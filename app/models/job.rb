@@ -17,4 +17,6 @@ class Job < ApplicationRecord
   scope :published, -> {where(is_hidden= false)}
   scope :recent, -> {order('created_at DESC')}
    scope :publish_lower, -> {order('wage_lower_bound DESC')}
+
+   has_many :resumes
 end
