@@ -1,0 +1,66 @@
+
+
+<%= render :partial => "jobs/search_bar" %>
+
+<br>
+<div class="search-result">
+
+  <table class="table table-borderd">
+    <% @jobs.each do |job| %>
+      <%= link_to(job.title,job_path(job)) %>
+      <hr>
+    <% end %>
+ </table>
+
+</div>
+
+<!-- <% if @jobs.blank?%> -->
+      <!-- <br> -->
+      <!-- <h3 class="text-center"> -->
+        <!-- Opps! No jobs matched yet, please try again. -->
+      <!-- </h3> -->
+
+      <!-- <% else %> -->
+  <!-- <h3 class="text-center" style="margin-top: 30px;">Total find <%= @jobs.count %> jobs</h3> -->
+<!-- <hr /> -->
+
+<!-- <table class="table table-boldered"> -->
+  <!-- <thead> -->
+    <!-- <tr> -->
+      <!-- <td> -->
+        <!-- 职缺 -->
+      <!-- </td> -->
+      <!-- <td> -->
+        <!-- 薪资下限 -->
+      <!-- </td> -->
+      <!-- <td> -->
+        <!-- 薪资上限 -->
+      <!-- </td> -->
+      <!-- <td> -->
+        <!-- 刊登时间 -->
+      <!-- </td> -->
+    <!-- </tr> -->
+  <!-- </thead> -->
+  <!-- <tbody> -->
+
+
+  <!-- <% @jobs.each do |job| %> -->
+  <!-- <tr> -->
+    <!-- <td> -->
+      <!-- <%= link_to(job.title, job_path(job))%> -->
+    <!-- </td> -->
+    <!-- <td> -->
+      <!-- <%= job.wage_lower_bound %> -->
+
+    <!-- </td> -->
+    <!-- <td> -->
+        <!-- <%= job.wage_upper_bound %> -->
+            <!-- </td> -->
+    <!-- <td> -->
+      <!-- <%=job.created_at %> -->
+    <!-- </td> -->
+  <!-- </tr> -->
+  <!-- <% end %> -->
+  <!-- </tbody> -->
+<!-- </table> -->
+<!-- <% end %> -->

@@ -1,0 +1,249 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require font-awesome
+ */
+
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+ @import "font-awesome";
+ .tilte-sign-up{
+   margin-top:25px;
+   margin-left: 30px;
+   //color: red;
+   //background-color: rgba(147, 213, 250, 0.25);//transparent;//背景颜色含透明度
+   width: 200px;
+   text-align: center;
+   padding-bottom: 20px;
+   padding-top: 20px;
+
+ }
+ .title-log-in{
+   margin-top:25px;
+   margin-left: 30px;
+   width: 200px;
+   text-align: center;
+   padding-bottom: 20px;
+   padding-top: 20px;
+ }
+
+ .form-inputs {
+  background-color: rgba(147, 213, 250, 0.25);//transparent;//背景颜色含透明度
+  max-width: 500px;//最大宽度
+
+  margin-bottom: 0px;//这样就可以紧接息面的描述文字
+  border-top-right-radius: 3px;//右上角圆边
+  border-top-left-radius: 3px;//左上角圆边
+  padding-bottom: 10px;
+
+}
+
+.form-actions{
+  margin-top:0px;
+  background-color: rgba(147, 213, 250, 0.25);//transparent;//背景颜色含透明度
+  margin-bottom: 0px;
+
+
+}
+.restfont{
+  padding-top: 10px;
+  margin-top: 0px;
+  background-color: rgba(147, 213, 250, 0.25);//transparent;//背景颜色含透明度
+
+}
+
+#image {
+  position:relative;//控制图片的位置
+  background-image: url('https://ww4.sinaimg.cn/large/006y8lVajw1fbz5f4eh2fj31kw11ynkw.jpg');
+  height:800px;  //加入适合的高度
+  background-size: cover;
+  margin-left: -15px;//让图片向左扩展15px
+  margin-right: -15px;
+}
+
+.position{
+  margin-top: 100px;
+}
+
+
+ .navbar-default{
+   background-color: #212121;//背景颜色
+   border-color: #212121;//边框颜色
+   margin-bottom: 0;//底部margin不撑开距离
+ }
+
+ .navbar-default .navbar-brand{
+   color: #EF6c00;//字体颜色
+   padding: 10px 15px;//软垫填充上下10px,左右15px
+   line-height: 30px;//文字行高
+ }
+
+ .navbar-default .navbar-brand:hover,
+ .navbar-default .navbar-brand:focus {
+   color: #6f9ac7;//鼠标放在链接上的文字颜色
+   background-color: transparent;//鼠标放置在链接上的背景颜色，这里设为透明
+ }
+
+ .navbar-default .navbar-nav >li >a{
+   color :#EF6C00;//查看navbar-nav的部分指定在注册／登录／邮箱
+ }
+ .navbar-default .navbar-nav>li>a:hover,
+ .navbar-default .navbar-nav>li>a:focus {
+   color:#6f9ac7;
+   background-color: transparent;
+ }
+
+ .navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #64FFDA;
+  background-color: #FFE0B2;
+
+}
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:focus,
+.navbar-default .navbar-nav > .open > a:hover {
+    background-color: #FFE0B2;//点击注册，邮箱，登录时的背景色
+    color: #212121;
+}
+
+.navbar-brand > img {
+    display: inline-block;	//图片和链接文字显示在同一行
+    margin-right: 10px; //图片和链接文字拉开一点距离
+    width: 32px; //定制图片宽度
+    height: 32px; //定制图片高度
+}
+
+ @media  (min-width: 768px){
+   .navbar{
+     border-radius: 0; //圆角为0
+   }
+
+ }
+
+ .jumbotron{
+   background-image: url('https://ww4.sinaimg.cn/large/006y8lVajw1fbz5f4eh2fj31kw11ynkw.jpg');
+   background-repeat: no-repeat;
+   background-size: cover;
+
+   padding-bottom: 110px;//背景显示范围向下增加110px
+
+
+ }
+
+ .container-fluid .jumbotron{
+   padding-bottom: 110px;//内部的底部边距，这样按钮不会很靠近底部了
+   margin: 0 -15px 20px;//顶部margin为0，因此可以直接接着导航栏；左右margin为负15，
+   //因此可以顶到浏览器的边缘（抵消 container-fluid 的 15px 左右padding);
+   //底部margin为20，会跟下面的内容撑开距离
+   border-radius: 0;//圆角为0
+ }
+
+ .title{
+   font-family: "Helvetica Neue", "Microsoft Yahei", 微软雅黑;
+   //text-align: center;也可以在这里修改title的显示位置
+   background-color: rgba(250, 250, 250, 0.39);//，产生背景，背景颜色含透明度
+   max-width: 500px;//最大宽度，背景宽度设为500px
+  margin-top: 200px;//和顶部拉开距离
+  margin-bottom: 0px;//title和其以下的内容拉开0px的距离，这样就可以紧接息面的描述文字
+  //如果不写margin-bottom，那么title和slogan之间默认还是有一定的距离
+
+  border-top-right-radius: 5px;//右上角圆边
+  border-top-left-radius: 5px;//左上角圆边
+  border-bottom-left-radius: 5px;//左上角圆边
+  border-bottom-right-radius: 5px;//左上角圆边
+ }
+
+ .jumbotron h1, .jumbotron .h1 {//title
+    text-align: left;//文字左对齐
+    color: #263238;	//字体颜色
+    padding: 50px 20px 0;//上50px，左右20px，下0
+}
+
+.jumbotron p {//段落
+    margin: 0;//上下左右margin为0
+    font-size: 26px;//字体大小
+    max-width: 500px;//最大宽度，字体限定在该范围内，超出范围自动换行
+    background-color: rgba(250, 250, 250, 0.39);//添加背景层，背景颜色含透明度
+    padding: 20px;//上下左右padding为20px
+    text-align:left;//文字左对齐
+    color: #222;//字体颜色
+    border-bottom-right-radius: 5px;//右下角圆边
+    border-bottom-left-radius: 5px;//左下角圆边
+    border-top-right-radius: 5px;//右上角圆边
+    border-top-left-radius: 5px;//左上角圆边
+}
+
+.btn-danger{
+  color:#fff;//按钮中的文字的字体颜色
+  background-color: #e57373;//按钮背景颜色
+  border-color: transparent;//按钮边框颜色
+}
+
+.btn-danger:hover {
+    background-color:#96230c;//鼠标放置在btn上的背景颜色,可以设置为透明
+    border-color:transparent ;//鼠标放置在btn上的边框颜色
+    color:#f44336;//按钮中的文字的字体颜色
+    //font-size: 32px;
+
+}
+
+.btn-lg, .btn-group-lg > .btn {
+    padding: 8px 16px;//通过padding来决定btn的大小
+    font-size: 20px;//btn文字大小
+    letter-spacing: 3px;//调整文字间距
+    border-radius: 3px;//btn圆角
+    width: 140px;//这里用指定宽度把btn拉得更长
+}
+
+.slogan{
+  margin-top: 10px;
+  margin-bottom: 50px;
+  text-align: center;
+  color: #5D4037;
+  top: 12px;
+}
+
+.lead{
+  margin-top: 50px;
+  margin-bottom: 60px;
+  text-align: center;
+  color: #5D4037;
+}
+
+.caption{
+  margin:30px;
+  text-align: center;
+  top: 20px;
+}
+
+.thumbnail{
+  border: 0 none;//让边框隐藏
+  box-shadow: none;
+  margin-top: 60px;
+}
+
+.custab{
+  border: 1px solid green;//为admin／jobs.index表格添加边框,border是边框宽度，solid是边框颜色
+  padding:5px;
+  margin: 5% 0;//控制页边空白
+  box-shadow: 3px 3px 2px #ccc;//控制阴影
+  transition: 0.5s;
+}
+
+.custab:hover{
+  box-shadow: 3px 3px 0px transparent;
+  transition: 0.5s;
+}
